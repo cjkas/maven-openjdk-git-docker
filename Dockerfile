@@ -1,6 +1,7 @@
 FROM maven:3.5-jdk-8-alpine
 
-RUN apk add --no-cache git docker
+#install build tools  with font subsystem required for font operations
+RUN apk add --no-cache git docker ttf-dejavu
 
 # Test 
 RUN mvn --version
